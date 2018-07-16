@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>RESET PASSWORD</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    <!-- In-lining styles to avoid needing a separate .css file -->
+    <style>
+        /* Generated from SCSS and GULP autoprefixer */
+
+        html,
+        body {
+            margin: 0;
+            height: 100%
+        }
+
+        body {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: start;
+            -ms-flex-align: start;
+            align-items: flex-start
+        }
+
+        .login__form {
+            background: #fff;
+
+
+            color: #333;
+            font-family: 'Montserrat', sans-serif;
+            border-radius: 5px
+        }
+
+        .login__form .login__header {
+            padding-top: 30px;
+            text-align: center;
+            margin-bottom: 60px
+        }
+
+        .login__form .login__header .login__title {
+            font-size: 24px;
+            font-weight: 400
+        }
+
+        .login__form .login__main {
+            max-width: 80%;
+            margin-left: auto;
+            margin-right: auto
+        }
+
+        .login__form .login__main .login__group {
+            position: relative
+        }
+
+        .login__form .login__main .login__group .login__input {
+            margin-top: 50px;
+            padding: 10px 10px 10px 5px;
+            color: #333;
+            font-family: 'Montserrat', sans-serif;
+            width: 100%;
+            font-size: 16px;
+            display: block;
+            border: none;
+            border-bottom: 1px solid #d0dce7;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box
+        }
+
+        .login__form .login__main .login__group .login__input:focus {
+            outline: none
+        }
+
+        .login__form .login__main .login__group .login__input:focus~label,
+        .login__form .login__main .login__group .login__input:valid~label {
+            top: -20px;
+            font-size: 12px;
+            text-transform: uppercase
+        }
+
+        .login__form .login__main .login__group .login__label {
+            color: #333;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            position: absolute;
+            pointer-events: none;
+            left: 5px;
+            top: 10px;
+            -webkit-transition: .2s ease all;
+            transition: .2s ease all
+        }
+
+
+        .login__form .login__main .login__terms {
+            font-size: 14px;
+            color: #a8b8c4;
+            margin: 40px auto;
+            line-height: 19px;
+        }
+
+        .login__form .login__main .login__terms a {
+            text-decoration: none;
+            color: #007ee5
+        }
+
+        .login__form .login__button {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            text-transform: uppercase;
+            width: 100vw;
+            background: #007ee5;
+            border: none;
+            border-radius: 2px;
+            color: #fff;
+            height: 45px;
+            font-size: 14px;
+            bottom: 0;
+            position: absolute
+        }
+
+        .login__button:hover {
+            cursor: pointer;
+        }
+
+        .login__bar {
+            position: relative;
+            display: block
+        }
+
+        .login__bar:before,
+        .login__bar:after {
+            content: '';
+            height: 2px;
+            width: 0;
+            bottom: 1px;
+            position: absolute;
+            background: #007ee5;
+            transition: .2s ease all;
+            -moz-transition: .2s ease all;
+            -webkit-transition: .2s ease all
+        }
+
+        .login__bar:before {
+            left: 50%
+        }
+
+        .login__bar:after {
+            right: 50%
+        }
+
+        input:focus~.login__bar:before,
+        input:focus~.login__bar:after {
+            width: 50%
+        }
+        .bold {
+            font-weight: 700!important;
+        }
+
+        @media (min-width: 620px) {
+            body {
+                background: #00c6ff;
+                /* fallback for old browsers */
+                background: -webkit-linear-gradient(to right, #0072ff, #00c6ff);
+                /* Chrome 10-25, Safari 5.1-6 */
+                background: linear-gradient(to right, #0072ff, #00c6ff);
+
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center
+            }
+            .login__form {
+                max-width: 400px;
+                height: 450px;
+                box-shadow: 8px 6px 11px 0px rgba(27, 27, 27, 0.28);
+                margin-left: auto;
+                margin-right: auto
+            }
+            .login__title {
+                position: relative
+            }
+            .login__footer {
+                text-align: center
+            }
+            .login__button{
+           box-shadow:7px 8px 0px 0px black;
+        }
+            .login__footer .login__button {
+                bottom: initial;
+                position: initial;
+                width: 320px
+            }
+        }
+    </style>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.js"></script>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js"></script>
+    <![endif]-->
+
+    {# *** Allow sub-templates to insert extra html to the head section *** #} {% block extra_css %}{% endblock %}
+</head>
+
+
+<body>
+    <form class="login__form" method="POST" name="frm_login" action="/reset">
+        <header class="login__header">
+                <h1 class="login__title bold">ERP PORTAL</h1>
+            <h2 class="login__title">Reset Password</h2>
+        </header>
+        <main class="login__main">
+            <div class="login__group">
+                <input class="login__input" type="password" name="input_password" required>
+                <label class="login__label">New Password </label>
+                <div class="login__bar"></div>
+            </div>
+            <!-- <div class="login__group">
+              <input class="login__input" type="password" name="input_password" required>
+              <label class="login__label">Confirm  Password</label>
+              <div class="login__bar"></div>
+           </div> -->
+            <p class="login__terms">By Reseting Passsword or clicking continue, I confirm that I haveread and agree to the
+                <a href="#">Terms</a> and
+                <a href="#">Privacy Policy</a>
+            </p>
+        </main>
+        <footer class="login__footer">
+            <input class="login__button" type="submit" name="btn_signin" value="Reset Password"  >
+            <input hidden  name="token"  value="{{ token }}" >
+        </footer>
+    </form>
+
+    {# *** Allow sub-templates to insert extra html to the bottom of the body *** #} {% block extra_js %}{% endblock %}
+
+</body>
+
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> {{ msg }}</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    <!-- In-lining styles to avoid needing a separate .css file -->
+    <style>
+        /* Generated from SCSS and GULP autoprefixer */
+
+        html,
+        body {
+            margin: 0;
+            height: 100%
+        }
+
+        body {
+            background: #00c6ff;
+                /* fallback for old browsers */
+                background: -webkit-linear-gradient(to right, #0072ff, #00c6ff);
+                /* Chrome 10-25, Safari 5.1-6 */
+                background: linear-gradient(to right, #0072ff, #00c6ff);
+
+        }
+        .login__title {
+            color: whitesmoke;
+            font-family: 'Montserrat', sans-serif;
+            width: 100vw;
+            text-align: center;
+            margin-top: 5rem;
+            font-weight: 300;
+            font-size: 1rem;
+        }
+
+        .bold {
+            font-size: 2rem;
+            font-weight: 700!important;
+        }
+
+        @media (min-width: 620px) {
+            .login__title{
+                font-size: 2rem;
+            }
+            .bold {
+                font-size: 5rem;
+            font-size: 5rem;
+        }
+        }
+    </style>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.js"></script>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js"></script>
+    <![endif]-->
+
+    {# *** Allow sub-templates to insert extra html to the head section *** #} {% block extra_css %}{% endblock %}
+</head>
+
+
+<body>
+
+                <h1 class="login__title bold">ERP PORTAL</h1>
+            <h2 class="login__title"> {{ msg }}</h2>
+
+
+    {# *** Allow sub-templates to insert extra html to the bottom of the body *** #} {% block extra_js %}{% endblock %}
+
+</body>
+
+</html>
